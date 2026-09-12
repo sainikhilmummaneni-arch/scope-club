@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Home · SCOPE Club</title>
+<meta name="description" content="SCOPE Club — student tech community at MLRIT, Hyderabad." />
+<link rel="icon" href="assets/favicon.ico" />
+<link rel="stylesheet" href="assets/style.css" />
+<style>
+  /* Custom additions for Events & Resources */
+  .filter-group {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+  .filter-btn {
+    padding: 8px 16px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  .filter-btn.active, .filter-btn:hover {
+    background: #000;
+    color: #fff;
+    border-color: #000;
+  }
+  /* Reusing card structure but adding pointer animations */
+  .animated-card {
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .animated-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  }
+  /* Grid specifically for smaller resource cards */
+  .resources-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 20px;
+  }
+  .resources-grid .wwd-card {
+    text-align: center;
+    padding: 20px;
+  }
+  .resources-grid h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0;
+  }
+</style>
+</head>
+<body>
+<nav class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <a href="index.html" class="brand">
+      <img src="assets/scope-icon.png" alt="SCOPE Club logo" class="brand-mark" /> SCOPE Club
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="what-we-do.html">What We Do</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="resources.html">Resources</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-actions" style="display:flex;align-items:center;gap:14px;">
+      <a href="contact.html" class="btn btn-primary" style="padding:10px 20px;">Join Us</a>
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<div class="scrim" id="scrim"></div>
+<div class="mobile-panel" id="mobilePanel">
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="what-we-do.html">What We Do</a>
+  <a href="events.html">Events</a>
+  <a href="resources.html">Resources</a>
+  <a href="contact.html">Contact</a>
+</div>
+
+<section class="hero" id="home">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="hero-tag"><span class="dot"></span> Student Tech Community · MLRIT</div>
+      <h1>Learn. Network. <span class="accent">Innovate.</span></h1>
+      <p class="lead">SCOPE Club is where students turn curiosity into working code — through hackathons, hands-on workshops, and a community built around building real things together.</p>
+      <div class="hero-actions">
+        <a href="events.html" class="btn btn-primary">Explore Events</a>
+        <a href="about.html" class="btn btn-ghost">About the Club</a>
+      </div>
+      <div class="hero-stats">
+        <div><strong>500+</strong><span>Active Members</span></div>
+        <div><strong>20+</strong><span>Events Hosted</span></div>
+        <div><strong>15+</strong><span>Projects Shipped</span></div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <img src="assets/scope-mark.png" alt="SCOPE Club logo mark" />
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0;">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Why SCOPE</span>
+      <h2>A quick look at the club</h2>
+      <p>Three ways we get students building — see the full picture on each page.</p>
+    </div>
+    <div class="wwd-grid">
+      <div class="wwd-card">
+        <div class="wwd-icon">&#9889;</div>
+        <h3>Hackathons</h3>
+        <p>Time-boxed team sprints where students design, build, and pitch a working product from scratch.</p>
+      </div>
+      <div class="wwd-card">
+        <div class="wwd-icon">&#127942;</div>
+        <h3>Coding Contests</h3>
+        <p>Regular problem-solving contests that sharpen data structures, algorithms, and speed.</p>
+      </div>
+      <div class="wwd-card">
+        <div class="wwd-icon">&#128736;&#65039;</div>
+        <h3>Projects</h3>
+        <p>Longer-term team builds — web apps, cloud deployments, tools — mentored end-to-end.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NEW EVENTS SECTION -->
+<section class="section" style="background: #f8f9fa;">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Events</span>
+      <h2>Our Timeline</h2>
+      
+      <!-- Event Filters -->
+      <div class="filter-group">
+        <button class="filter-btn active">Now</button>
+        <button class="filter-btn">Upcoming</button>
+        <button class="filter-btn">Past</button>
+      </div>
+    </div>
+    
+    <div class="wwd-grid">
+      <!-- Now -->
+      <div class="wwd-card animated-card">
+        <div class="wwd-icon">☁️</div>
+        <h3>Cloud Trek ’26</h3>
+        <p style="color: #d93025; font-weight: 600;">Today — 11–12 Sep 2026</p>
+      </div>
+
+      <!-- Upcoming -->
+      <div class="wwd-card animated-card">
+        <div class="wwd-icon">🔮</div>
+        <h3>SCOPE Session</h3>
+        <p>Upcoming Placeholder</p>
+      </div>
+
+      <!-- Past -->
+      <div class="wwd-card animated-card">
+        <div class="wwd-icon">🏆</div>
+        <h3>Zenith ’25</h3>
+        <p>Past Event</p>
+      </div>
+      
+      <div class="wwd-card animated-card">
+        <div class="wwd-icon">☁️</div>
+        <h3>AWS Cloud Trek</h3>
+        <p>Past Event</p>
+      </div>
+      
+      <div class="wwd-card animated-card">
+        <div class="wwd-icon">🎮</div>
+        <h3>GameHub 2.0</h3>
+        <p>Past Event</p>
+      </div>
+      
+      <div class="wwd-card animated-card">
+        <div class="wwd-icon">🌐</div>
+        <h3>Webmania</h3>
+        <p>Past Event</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NEW RESOURCES SECTION -->
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Resources</span>
+      <h2>Tech Stacks & Domains</h2>
+      <p>Everything you need to master your chosen domain.</p>
+    </div>
+    
+    <div class="resources-grid">
+      <div class="wwd-card animated-card"><div class="wwd-icon">📱</div><h3>Appdev</h3></div>
+      <div class="wwd-card animated-card"><div class="wwd-icon">🐍</div><h3>Python</h3></div>
+      <div class="wwd-card animated-card"><div class="wwd-icon">🎨</div><h3>Frontend</h3></div>
+      <div class="wwd-card animated-card"><div class="wwd-icon">⚙️</div><h3>Backend</h3></div>
+      <div class="wwd-card animated-card"><div class="wwd-icon">🤖</div><h3>ML</h3></div>
+      <div class="wwd-card animated-card"><div class="wwd-icon">🐙</div><h3>Git</h3></div>
+      <div class="wwd-card animated-card"><div class="wwd-icon">🚀</div><h3>DevOps</h3></div>
+      <div class="wwd-card animated-card"><div class="wwd-icon">⚡</div><h3>JavaScript</h3></div>
+      <div class="wwd-card animated-card"><div class="wwd-icon">☕</div><h3>Java</h3></div>
+      <div class="wwd-card animated-card"><div class="wwd-icon">🔌</div><h3>IoT</h3></div>
+      <div class="wwd-card animated-card"><div class="wwd-icon">💾</div><h3>SQL</h3></div>
+      <div class="wwd-card animated-card"><div class="wwd-icon">🛡️</div><h3>Security</h3></div>
+      <div class="wwd-card animated-card"><div class="wwd-icon">🐧</div><h3>OSDev</h3></div>
+      <div class="wwd-card animated-card"><div class="wwd-icon">🧠</div><h3>Deep Learning</h3></div>
+      <div class="wwd-card animated-card"><div class="wwd-icon">📈</div><h3>Digital Marketing</h3></div>
+      <div class="wwd-card animated-card"><div class="wwd-icon">✨</div><h3>Design</h3></div>
+      <div class="wwd-card animated-card"><div class="wwd-icon">⛓️</div><h3>Blockchain</h3></div>
+      <div class="wwd-card animated-card"><div class="wwd-icon">🧩</div><h3>DSA</h3></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand"><img src="assets/scope-icon.png" alt="SCOPE Club logo" /> SCOPE Club</div>
+        <p>Student tech community at MLRIT, Hyderabad — learning by building, together.</p>
+      </div>
+      <div>
+        <h5>Explore</h5>
+        <div class="flinks">
+          <a href="about.html">About</a>
+          <a href="what-we-do.html">What We Do</a>
+          <a href="events.html">Events</a>
+          <a href="resources.html">Resources</a>
+        </div>
+      </div>
+      <div>
+        <h5>Connect</h5>
+        <div class="flinks">
+          <a href="https://www.instagram.com/mlrit_scope/" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://www.linkedin.com/in/scope-club-mlrit-9017541a3/" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://x.com/MlritScope" target="_blank" rel="noopener">X (Twitter)</a>
+          <a href="https://github.com/scopeclub" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </div>
+      <div>
+        <h5>Get in touch</h5>
+        <div class="flinks">
+          <a href="mailto:scopeclub@mlrinstitutions.ac.in">scopeclub@mlrinstitutions.ac.in</a>
+          <a href="contact.html">Contact page</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 SCOPE Club, MLRIT.</span>
+      <span>Built by students, for students.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/script.js"></script>
+<!-- Logic for event filtering can be added to your script.js -->
+</body>
+</html>

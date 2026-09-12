@@ -1,0 +1,35 @@
+<!-- New Event 1: Hackathon -->
+      <div class="event-card">
+        <div class="event-media"><img src="assets/events/hackathon.svg" alt="24-Hour Hackathon illustration" /></div>
+        <span class="event-tag">Competition</span>
+        <div class="event-body">
+          <h3>CodeCrafters Hackathon</h3>
+          <div class="event-meta"><span>24-Hours</span><span>&middot;</span><span>Club-wide</span></div>
+          <p>An overnight coding marathon where teams brainstorm, build, and pitch innovative solutions to real-world problems.</p>
+        </div>
+        <span class="event-hint">Hover for a look &#8594;</span>
+      </div>
+
+      <!-- New Event 2: AI/ML Bootcamp -->
+      <div class="event-card">
+        <div class="event-media"><img src="assets/events/ai-bootcamp.svg" alt="AI and Machine Learning Bootcamp illustration" /></div>
+        <span class="event-tag">AI/ML</span>
+        <div class="event-body">
+          <h3>AI/ML Fundamentals</h3>
+          <div class="event-meta"><span>Bootcamp</span><span>&middot;</span><span>Intermediate</span></div>
+          <p>Dive deep into artificial intelligence and machine learning models. Learn how to train your first neural network using Python.</p>
+        </div>
+        <span class="event-hint">Hover for a look &#8594;</span>
+      </div>
+
+      <!-- New Event 3: Open Source Fest -->
+      <div class="event-card">
+        <div class="event-media"><img src="assets/events/open-source.svg" alt="Open Source Fest illustration" /></div>
+        <span class="event-tag">Open Source</span>
+        <div class="event-body">
+          <h3>Open Source Fest</h3>
+          <div class="event-meta"><span>Month-long</span><span>&middot;</span><span>Beginner-friendly</span></div>
+          <p>A guided initiative to help members make their very first pull requests and contribute to global open-source projects on GitHub.</p>
+        </div>
+        <span class="event-hint">Hover for a look &#8594;</span>
+      </div>
